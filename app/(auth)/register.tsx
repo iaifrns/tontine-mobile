@@ -32,7 +32,9 @@ const RegisterPage = () => {
               <Text className="text-gray-400 text-lg font-semibold">
                 Entrez les détails de votre compte ici ou{" "}
                 <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
-                  <Text className="text-primary font-semibold">connectez-vous</Text>
+                  <Text className="text-primary font-semibold">
+                    connectez-vous
+                  </Text>
                 </TouchableOpacity>
               </Text>
             </View>
@@ -72,7 +74,12 @@ const RegisterPage = () => {
             </View>
           </View>
           {/* custom button section */}
-          <CustomSubmitButton text="Soumettre" onPressAction={() => {}} />
+          <CustomSubmitButton
+            text="Soumettre"
+            onPressAction={() => {
+              router.push("/(auth)/otp-validation");
+            }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
